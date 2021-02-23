@@ -1,0 +1,428 @@
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans-Regular.woff') format('woff');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans-Bold.woff') format('woff');
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans-ExtraBold.woff') format('woff');
+  font-display: swap;
+  font-weight: 800;
+  font-style: normal;
+}
+
+:root {
+  --container-padding-left: 160px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+
+.container {
+ max-width: 1630px;
+  padding: 0 15px;
+   margin: 0 auto
+}
+
+
+
+body {position: relative;
+  margin: 0;
+
+  font-family: 'OpenSans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+
+
+
+.nav__list {
+  display: flex;
+  
+  padding-top: 2px;
+  margin: 0;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 62px;
+}
+
+.nav__item {
+  display: flex;
+
+}
+
+.header__logo {
+  width: 173px;
+  height: 40px;
+}
+
+.action__button {
+  font-size: 19px;
+  line-height: 25px;
+  text-align: center;
+  border: none;
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0);
+}
+.header__action{
+  
+  padding-left: auto;
+  padding-right: 20px;
+  padding-top: 5px;
+}
+.action__button::before {
+  content: url(../img/Vector.svg);
+  margin-right: 7px;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Задаю параметры для основного, родительского блока, меню выпадающего списка. */
+
+/* Задаю стили для блоков выпадающего списка. */
+.header{
+  position: absolute;
+  top: 0;
+  
+}
+
+.header__menu>li:not(:last-child){
+  display: inline-block;
+  height: 20px;
+  margin-right: 80px;
+  /* Считаем координаты относительно исходного места. */
+  position: relative;
+}
+.header__menu>li::after{
+  padding-left: 3px;
+  font-size: 18px;
+  content: url("../img/arr/arr.png");
+}
+/* Задаю стили, чтобы скрыть дочерние блоки выпадающего списка. Ну и немного украшаю. */
+
+.header__menu>li>ul {
+  position: absolute;
+  max-width: 300px;
+  top: 100px;
+  left: 0px;
+  display: none;
+  padding: 20px 40px;
+  
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Так я делаю прежде скрытую часть видимой — при наведении курсора. */
+
+
+.header__menu>li:hover>ul {
+display: block;
+}
+
+.header__menu>li:active>ul {
+  display: block;
+}
+.header__top, .header__bottom {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+}
+.header__top{
+  padding-left: 160px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: black;
+  background-origin:border-box;
+}
+.header__bottom {
+  position: relative;
+  z-index: 1;
+  padding-left: 160px;
+  padding-bottom: 20px;
+  padding-top: 30px;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-origin:border-box;
+}
+.top{
+  width: 100%;
+background-color: black;
+
+}
+.bottom{
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.dropdown__item {
+  background-repeat: no-repeat;
+  background-position-y: center;
+  padding: 20px 120px 20px 20px;
+}
+.header__nav{
+  padding-left: 179px;
+}
+.p1 {
+  background-image: url("../img/hero/tintoretto.png");
+}
+
+.p2 {
+  background-image: url("../img/hero/fridrih.png");
+}
+
+.p3 {
+  background-image: url("../img/hero/leonardo.png");
+}
+
+.p4 {
+  background-image: url("../img/hero/veroccio.png");
+}
+
+.p5 {
+  background-image: url("../img/hero/mone.png");
+}
+
+.p6 {
+  background-image: url("../img/hero/sisley.png");
+}
+
+.p7 {
+  background-image: url("../img/hero/mane.png");
+}
+
+.p8 {
+  background-image: url("../img/hero/renoir.png");
+}
+
+.p9 {
+  background-image: url("../img/hero/vangog.png");
+}
+
+.p10 {
+  background-image: url("../img/hero/sezan.png");
+}
+
+.p11 {
+  background-image: url("../img/hero/gogen.png");
+}
+
+.p12 {
+  background-image: url("../img/hero/sera.png");
+}
+
+.p13 {
+  background-image: url("../img/hero/kandinsky.png");
+}
+
+.p14 {
+  background-image: url("../img/hero/marinetti.png");
+}
+
+.p15 {
+  background-image: url("../img/hero/malevich.png");
+}
+
+.p16 {
+  background-image: url("../img/hero/picasso.png");
+}
+
+.p17 {
+  background-image: url("../img/hero/karra.png");
+}
+
+.p18 {
+  background-image: url("../img/hero/pratella.png");
+}
+
+.p19 {
+  background-image: url("../img/hero/severini.png");
+}
+
+.p20 {
+  background-image: url("../img/hero/balla.png");
+}
+
+.nav__link,.dropdown__link, .menu__link {
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.nav__link{
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 32px;
+  /* identical to box height */
+  text-align: center;
+  color: #FFFFFF;
+  letter-spacing: 0.5px;
+  word-wrap: none;
+}
+
+
+.header__menu {
+  display:flex;
+justify-content: space-between;
+}
+
+.search__input {
+ 
+  width: 220px;
+  background-color: rgba(0, 0, 0, 0);
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 19px;
+}
+.header__search{
+  padding: 0px 157px 0 0px; 
+
+}
+.header__search::before {
+ 
+  content: " ";
+  padding:20px 20px;
+ 
+background-image: url("../img/Group64.svg");
+background-repeat: no-repeat;
+background-position-x: 13px;
+background-position-y: 20px;
+}
+
+
+.header__link {
+  color: #FFFFFF
+}
+/***************hero**************************/
+.swiper-container {
+  max-width: 100%;
+  height: 700px;
+}
+.img1{
+  background-image: url("../img/hero/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 1.jpg");
+}
+.img2{
+  background-image: url("../img/hero/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 2.jpg");
+}
+.img3{
+  background-image: url("../img/hero/birmingham-museums-trust-MK_98NuC4-4-unsplash\ 3.jpg");
+}
+
+.swiper-slide{
+  background-position-y: -100px;
+}
+.hero__text{
+  position: absolute;
+  z-index: 1;
+  top:247px;
+  left:155px;
+  width: 597px;
+}
+.hero__slider{
+  position: relative;
+  z-index: -1;
+}
+h1{
+  margin:0;
+  font-family: 'OpenSans';
+font-style: normal;
+font-weight: 600;
+font-size: 72px;
+line-height: 85px;
+
+color: #FFFFFF;
+}
+.hero__description{
+  margin:0;
+  padding-top:20px;
+  padding-left:6px;
+  font-family: 'OpenSans';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 30px;
+/* or 167% */
+
+
+color: #FFFFFF;
+}
+.subscribe__button{
+width: 314px;
+height: 70px;
+background: #9D5CD0;
+border-radius: 100px;
+  font-family: 'OpenSans';
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 25px;
+/* identical to box height */
+
+text-align: center;
+
+color: #FFFFFF;
+}
+.hero__action{
+  padding-top:90px;
+  padding-left:5px;
+}
+
+/*********************about**************************/
+.about{
+  padding-right: 681px;
+  padding-top: 80px;
+  padding-left:157px;
+  padding-bottom: 72px;
+}
+h2{
+  margin: 0;
+}
+
+.about__header{
+  font-family: 'OpenSans';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 65px;
+
+color: #333333;
+}
+.about__description{
+  margin: 0;
+padding-top:15px;
+  font-family: 'OpenSans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 32px;
+/* or 200% */
+letter-spacing: 0px;
+
+color: #333333;
+}
