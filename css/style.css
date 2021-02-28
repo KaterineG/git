@@ -16,6 +16,14 @@
 
 @font-face {
   font-family: 'OpenSans';
+  src: url('../fonts/OpenSans-SemiBold.woff') format('woff');
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
   src: url('../fonts/OpenSans-ExtraBold.woff') format('woff');
   font-display: swap;
   font-weight: 800;
@@ -34,14 +42,16 @@
 
 a {
   text-decoration: none;
+   cursor: pointer;
 }
-
 .container {
   max-width: 1630px;
   padding: 0 15px;
   margin: 0 auto
 }
-
+.nav__link:hover{
+  color:blueviolet;
+}
 body {
   position: relative;
   margin: 0;
@@ -72,6 +82,8 @@ body {
 }
 
 .action__button {
+  padding:0;
+  padding-top:2px;
   font-size: 19px;
   line-height: 25px;
   text-align: center;
@@ -83,8 +95,7 @@ body {
   padding: 0;
 }
 .header__action {
-  padding-left: 10px;
-  padding-top: 5px;
+ padding-top: 5px;
 }
 
 .action__button::before {
@@ -104,6 +115,7 @@ ul, li {
 
 .header {
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -128,7 +140,7 @@ ul, li {
 .header__menu>li>ul {
   position: absolute;
   max-width: 300px;
-  top: 100px;
+  top: 69px;
   left: 0px;
   display: none;
   padding: 20px 40px;
@@ -162,7 +174,7 @@ ul, li {
 }
 .header__top {
   width: 100%;
-  padding-top: 30px;
+  padding-top: 31px;
   padding-bottom: 28px;
   background-color: black;
   background-origin: border-box;
@@ -182,7 +194,12 @@ ul, li {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
 }
-
+.menu__link:hover{
+  color:blueviolet;
+}
+.dropdown{
+  background-color: rgba(0, 0, 0, 0.4);
+}
 .dropdown__item {
   background-repeat: no-repeat;
   background-position-y: center;
@@ -190,7 +207,7 @@ ul, li {
 }
 
 .header__nav {
-  padding-right: 82px;
+  padding-right: 101px;
 }
 
 .p1 {
@@ -304,7 +321,9 @@ ul, li {
   color: #fff;
   font-size: 19px;
 }
-
+.header__search{
+  padding-top:3px;
+}
 
 
 .header__search::before {
