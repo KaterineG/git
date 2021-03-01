@@ -18,4 +18,8 @@ const swiper = new Swiper('.swiper-container', {
   scrollbar: {
     el: '.swiper-scrollbar',
   },
+  autoplay: {
+    delay: 4500,
+    disableOnInteraction: false,
+  },
 });
