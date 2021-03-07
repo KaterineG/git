@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" type="text/CSS" href="css/normalize.css">
   <link rel="stylesheet" type="text/CSS" href="css/style.css">
   <link rel="stylesheet" type="text/CSS" href="css/swiper-bundle.min.css">
 </head>
@@ -64,45 +65,45 @@
       <div class="container">
         <div class="header__links">
           <ul class="header__menu menu">
-            <li class="menu__item"><button class="menu__link">Реализм</button>
-              <ul class="dropdown">
-                <li class="dropdown__item p1"><a class="dropdown__link" href="#">Тинторетто</a></li>
-                <li class="dropdown__item p2"><a class="dropdown__link" href="#">Фридрих</a></li>
-                <li class="dropdown__item p3"><a class="dropdown__link" href="#">Леонардо</a></li>
-                <li class="dropdown__item p4"><a class="dropdown__link" href="#">Вероккьо</a></li>
+            <li class="menu__item select" data-item="1"><button  class="menu__link">Реализм</button>
+              <ul class="dropdown option" data-dropdown="1">
+                <li class="dropdown__item"><button  class="dropdown__link p1" href="#">Тинторетто</button></li>
+                <li class="dropdown__item"><button  class="dropdown__link p2" href="#">Фридрих</button></li>
+                <li class="dropdown__item"><button  class="dropdown__link p3" href="#">Леонардо</button></li>
+                <li class="dropdown__item"><button  class="dropdown__link p4" href="#">Вероккьо</button></li>
               </ul>
             </li>
 
-            <li class="menu__item"><button class="menu__link" >Импрессионизм</button>
-              <ul class="dropdown">
-                <li class="dropdown__item p5"><a class="dropdown__link" href="#">Моне</a></li>
-                <li class="dropdown__item p6"><a class="dropdown__link" href="#">Сислей</a></li>
-                <li class="dropdown__item p7"><a class="dropdown__link" href="#">Мане</a></li>
-                <li class="dropdown__item p8"><a class="dropdown__link" href="#">Ренуар</a></li>
+            <li class="menu__item select" data-item="2"><button class="menu__link" >Импрессионизм</button>
+              <ul class="dropdown option" data-dropdown="2">
+                <li class="dropdown__item"><button  class="dropdown__link p5" href="#">Моне</button></li>
+                <li class="dropdown__item"><button  class="dropdown__link p6" href="#">Сислей</button></li>
+                <li class="dropdown__item"><button  class="dropdown__link p7" href="#">Мане</button></li>
+                <li class="dropdown__item"><button  class="dropdown__link p8" href="#">Ренуар</button></li>
               </ul>
             </li>
-            <li class="menu__item"><button class="menu__link" >Постимпрессионизм</button>
-              <ul class="dropdown">
-                <li class="dropdown__item p9"><a class="dropdown__link" href="#">Ван&#8209;Гог</a></li>
-                <li class="dropdown__item p10"><a class="dropdown__link" href="#">Сезанн</a></li>
-                <li class="dropdown__item p11"><a class="dropdown__link" href="#">Гоген</a></li>
-                <li class="dropdown__item p12"><a class="dropdown__link" href="#">Сёра</a></li>
+            <li class="menu__item select" data-item="3"><button class="menu__link" >Постимпрессионизм</button>
+              <ul class="dropdown option" data-dropdown="3">
+                <li class="dropdown__item"><button class="dropdown__link p9" href="#">Ван&#8209;Гог</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p10" href="#">Сезанн</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p11" href="#">Гоген</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p12" href="#">Сёра</button></li>
               </ul>
             </li>
-            <li class="menu__item"><button class="menu__link" >Авангард</button>
-              <ul class="dropdown">
-                <li class="dropdown__item p13"><a class="dropdown__link" href="#">Кандинский</a></li>
-                <li class="dropdown__item p14"><a class="dropdown__link" href="#">Маринетти</a></li>
-                <li class="dropdown__item p15"><a class="dropdown__link" href="#">Малевич</a></li>
-                <li class="dropdown__item p16"><a class="dropdown__link" href="#">Пикассо</a></li>
+            <li class="menu__item select" data-item="4"><button class="menu__link" >Авангард</button>
+              <ul class="dropdown option" data-dropdown="4">
+                <li class="dropdown__item"><button class="dropdown__link p13" href="#">Кандинский</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p14" href="#">Маринетти</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p15" href="#">Малевич</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p16" href="#">Пикассо</button></li>
               </ul>
             </li>
-            <li class="menu__item"><button class="menu__link" >Футуризм</button>
-              <ul class="dropdown">
-                <li class="dropdown__item p17"><a class="dropdown__link" href="#">Карра</a></li>
-                <li class="dropdown__item p18"><a class="dropdown__link" href="#">Пирантелла</a></li>
-                <li class="dropdown__item p19"><a class="dropdown__link" href="#">Северини</a></li>
-                <li class="dropdown__item p20"><a class="dropdown__link" href="#">Балла</a></li>
+            <li class="menu__item select" data-item="5"><button class="menu__link" >Футуризм</button>
+              <ul class="dropdown option" data-dropdown="5">
+                <li class="dropdown__item"><button class="dropdown__link p17" href="#">Карра</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p18" href="#">Пирантелла</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p19" href="#">Северини</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p20" href="#">Балла</button></li>
               </ul>
             </li>
           </ul>
@@ -122,7 +123,7 @@
 
 
     <section class="hero">
-
+<div class="container">
       <div class="hero__slider">
         <!-- Slider main container -->
         <div class="swiper-container">
@@ -140,8 +141,8 @@
 
 
       <div class="hero__text">
-        <h1 hidden>Прикоснитесь к&nbsp;прекрасному</h1>
-        <p class="hero__header">Прикоснитесь к&nbsp;прекрасному</p>
+        <h1 class="visually-hidden">Прикоснитесь к&nbsp;прекрасному</h1>
+        <h2 class="hero__header">Прикоснитесь к&nbsp;прекрасному</h2>
         <p class="hero__description">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий
           создаёт предпосылки для новых предложений.</p>
         
@@ -150,7 +151,7 @@
 
       </div>
 
-
+</div>
     </section>
     <section class="about" id="about">
       <div class="container">
