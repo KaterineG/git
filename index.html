@@ -20,7 +20,7 @@
     <div class="header__top">
       <div class="container">
         <div class="header__content">
-          <a href="#"><img class="header__logo" src="img/logo/logo.png" alt="logo" /></a>
+          <a class="header__logo logo" href="#"><img class="logo__pic" src="img/logo/logo.png" alt="logo" /></a>
 
           <nav class="header__nav nav">
             <ul class="nav__list">
@@ -49,9 +49,15 @@
 
           </nav>
 
-          
-            <button class="action__button">Войти</button>
-          
+
+          <button class="header__button">
+            <svg width="14" height="13" viewbox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M5.62056 9.09278L6.63889 10.1111L10.25 6.5L6.63889 2.88889L5.62056 3.90722L7.48389 5.77778H0.5V7.22222H7.48389L5.62056 9.09278ZM12.0556 0H1.94444C1.14278 0 0.5 0.65 0.5 1.44444V4.33333H1.94444V1.44444H12.0556V11.5556H1.94444V8.66667H0.5V11.5556C0.5 12.35 1.14278 13 1.94444 13H12.0556C12.85 13 13.5 12.35 13.5 11.5556V1.44444C13.5 0.65 12.85 0 12.0556 0Z"
+                fill="white" />
+            </svg>
+            Войти</button>
+
 
         </div>
 
@@ -65,51 +71,82 @@
       <div class="container">
         <div class="header__links">
           <ul class="header__menu menu">
-            <li class="menu__item select" data-item="1"><button  class="menu__link">Реализм</button>
+            <li class="menu__item select" data-item="1"><button class="menu__link">Реализм<svg class="menu__icon"
+                  width="12" height="11" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 5L6 10L0.999997 5" stroke="white" />
+                </svg></button>
               <ul class="dropdown option" data-dropdown="1">
-                <li class="dropdown__item"><button  class="dropdown__link p1" href="#">Тинторетто</button></li>
-                <li class="dropdown__item"><button  class="dropdown__link p2" href="#">Фридрих</button></li>
-                <li class="dropdown__item"><button  class="dropdown__link p3" href="#">Леонардо</button></li>
-                <li class="dropdown__item"><button  class="dropdown__link p4" href="#">Вероккьо</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p1">Тинторетто</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p2">Фридрих</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p3">Леонардо</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p4">Вероккьо</button></li>
               </ul>
             </li>
 
-            <li class="menu__item select" data-item="2"><button class="menu__link" >Импрессионизм</button>
+            <li class="menu__item select" data-item="2"><button class="menu__link">Импрессионизм<svg class="menu__icon"
+                  width="12" height="11" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 5L6 10L0.999997 5" stroke="white" />
+                </svg></button>
               <ul class="dropdown option" data-dropdown="2">
-                <li class="dropdown__item"><button  class="dropdown__link p5" href="#">Моне</button></li>
-                <li class="dropdown__item"><button  class="dropdown__link p6" href="#">Сислей</button></li>
-                <li class="dropdown__item"><button  class="dropdown__link p7" href="#">Мане</button></li>
-                <li class="dropdown__item"><button  class="dropdown__link p8" href="#">Ренуар</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p5">Моне</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p6">Сислей</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p7">Мане</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p8">Ренуар</button></li>
               </ul>
             </li>
-            <li class="menu__item select" data-item="3"><button class="menu__link" >Постимпрессионизм</button>
+            <li class="menu__item select" data-item="3"><button class="menu__link">Постимпрессионизм<svg
+                  class="menu__icon" width="12" height="11" viewbox="0 0 12 11" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 5L6 10L0.999997 5" stroke="white" />
+                </svg></button>
               <ul class="dropdown option" data-dropdown="3">
-                <li class="dropdown__item"><button class="dropdown__link p9" href="#">Ван&#8209;Гог</button></li>
-                <li class="dropdown__item"><button class="dropdown__link p10" href="#">Сезанн</button></li>
-                <li class="dropdown__item"><button class="dropdown__link p11" href="#">Гоген</button></li>
-                <li class="dropdown__item"><button class="dropdown__link p12" href="#">Сёра</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p9">Ван&#8209;Гог</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p10">Сезанн</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p11">Гоген</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p12">Сёра</button></li>
               </ul>
             </li>
-            <li class="menu__item select" data-item="4"><button class="menu__link" >Авангард</button>
+            <li class="menu__item select" data-item="4"><button class="menu__link">Авангард<svg class="menu__icon"
+                  width="12" height="11" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 5L6 10L0.999997 5" stroke="white" />
+                </svg></button>
               <ul class="dropdown option" data-dropdown="4">
-                <li class="dropdown__item"><button class="dropdown__link p13" href="#">Кандинский</button></li>
-                <li class="dropdown__item"><button class="dropdown__link p14" href="#">Маринетти</button></li>
-                <li class="dropdown__item"><button class="dropdown__link p15" href="#">Малевич</button></li>
-                <li class="dropdown__item"><button class="dropdown__link p16" href="#">Пикассо</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p13">Кандинский</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p14">Маринетти</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p15">Малевич</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p16">Пикассо</button></li>
               </ul>
             </li>
-            <li class="menu__item select" data-item="5"><button class="menu__link" >Футуризм</button>
+            <li class="menu__item select" data-item="5"><button class="menu__link">Футуризм<svg class="menu__icon"
+                  width="12" height="11" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 5L6 10L0.999997 5" stroke="white" />
+                </svg></button>
               <ul class="dropdown option" data-dropdown="5">
-                <li class="dropdown__item"><button class="dropdown__link p17" href="#">Карра</button></li>
-                <li class="dropdown__item"><button class="dropdown__link p18" href="#">Пирантелла</button></li>
-                <li class="dropdown__item"><button class="dropdown__link p19" href="#">Северини</button></li>
-                <li class="dropdown__item"><button class="dropdown__link p20" href="#">Балла</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p17">Карра</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p18">Пирантелла</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p19">Северини</button></li>
+                <li class="dropdown__item"><button class="dropdown__link p20">Балла</button></li>
               </ul>
             </li>
           </ul>
 
           <div class="header__search search">
+            
+            <button class="search__icon"><svg class="search__svg"  width="22" height="22" viewbox="0 0 22 22" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect width="6.8678" height="1.71695"
+                transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+                fill="white" />
+           
+            </svg></button>
             <input class="search__input" name="search" placeholder="Поиск по сайту">
+            <svg class="search__line" width="219" height="1" viewbox="0 0 219 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0.0969238" width="218" height="1" fill="white" fill-opacity="0.85"/>
+              </svg>
+              
+
           </div>
         </div>
       </div>
@@ -123,35 +160,35 @@
 
 
     <section class="hero">
-<div class="container">
-      <div class="hero__slider">
-        <!-- Slider main container -->
-        <div class="swiper-container">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide img1"></div>
-            <div class="swiper-slide img2"></div>
-            <div class="swiper-slide img3"></div>
+      <div class="container">
+        <div class="hero__slider">
+          <!-- Slider main container -->
+          <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide img1"></div>
+              <div class="swiper-slide img2"></div>
+              <div class="swiper-slide img3"></div>
+
+            </div>
 
           </div>
+        </div>
+
+
+        <div class="hero__text">
+          <h1 class="hero__hidden visually-hidden">Прикоснитесь к&nbsp;прекрасному</h1>
+          <h2 class="hero__header">Прикоснитесь к&nbsp;прекрасному</h2>
+          <p class="hero__description">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий
+            создаёт предпосылки для новых предложений.</p>
+
+          <button class="hero__button">Подписаться на рассылку</button>
+
 
         </div>
-      </div>
-
-
-      <div class="hero__text">
-        <h1 class="visually-hidden">Прикоснитесь к&nbsp;прекрасному</h1>
-        <h2 class="hero__header">Прикоснитесь к&nbsp;прекрасному</h2>
-        <p class="hero__description">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий
-          создаёт предпосылки для новых предложений.</p>
-        
-          <button class="subscribe__button">Подписаться на рассылку</button>
-        
 
       </div>
-
-</div>
     </section>
     <section class="about" id="about">
       <div class="container">

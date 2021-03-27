@@ -41,12 +41,10 @@
 }
 
 a {
-  margin:0;
+  margin: 0;
   text-decoration: none;
 }
-p{
-  margin:0;
-}
+
 .container {
   max-width: 1630px;
   padding: 0 15px;
@@ -57,33 +55,48 @@ body {
   position: relative;
   margin: 0;
   font-family: 'OpenSans', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
+}
+
+/*общие стили для кнопок*/
+
+.header__button {
+  padding: 0 0 5px 0;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+/*общие стили для списков*/
+
+.nav__item, .header__nav, .header__menu, .menu__item, .dropdown, .dropdown__item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .nav__list {
   display: flex;
-  padding-top: 6px;
   margin: 0;
+  padding: 0;
+  padding-bottom: 3px;
 }
 
 .nav__item:not(:last-child) {
-  margin-right: 60px;
+  margin-right: 46px;
 }
 
-.nav__item {
-  display: flex;
+.header__nav {
+  padding-right: 100px;
 }
 
-.header__logo {
-  padding-top: 4px;
+.logo__pic {
   width: 173px;
+  height: 40px;
 }
 
-.action__button {
-  padding: 0;
-  padding-top: 2px;
+.header__button {
+  position: relative;
+  width: 75px;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -91,28 +104,58 @@ body {
   border: none;
   color: rgba(255, 255, 255, 0.85);
   background: rgba(0, 0, 0, 0);
+  transition: color 0.2s ease;
 }
 
-.button {
-  padding: 0;
-  border: none;
-  background-color: rgba(0, 0, 0, 0);
+.header__button::after {
+  content: '';
+  width: 86px;
+  height: 25px;
+  position: absolute;
+  top: -2px;
+  left: -11px;
+  border: 2px solid rgb(0, 0, 0, 0);
+  z-index: 0;
+  transition: border-color .2s ease;
 }
 
-.action__button::before {
-  content: url(../img/Vector.svg);
-  margin-right: 7px;
+.header__button:hover {
+  color: #C283F3;
 }
 
-ul, li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.header__button:focus::after {
+  border-color: #7943A4;
+  color: #fff;
 }
 
-/* Задаю параметры для основного, родительского блока, меню выпадающего списка. */
+.header__button:focus {
+  color: #fff;
+}
 
-/* Задаю стили для блоков выпадающего списка. */
+.header__button:active .header__button::after {
+  border-color: #7943A4;
+  color: #fff;
+}
+
+.header__button:active {
+  color: #fff;
+}
+
+.header__button:hover path {
+  fill: #C283F3;
+}
+
+.header__button:focus path {
+  fill: #fff;
+}
+
+.header__button:active path {
+  fill: #fff;
+}
+
+.header__button path {
+  transition: fill .3s ease;
+}
 
 .header {
   position: absolute;
@@ -123,21 +166,13 @@ ul, li {
 }
 
 .menu__item:not(:last-child) {
-  display: inline-block;
-  margin-right: 96px;
-  /* Считаем координаты относительно исходного места. */
+  margin-right: 76px;
 }
 
 .menu__item {
+  display: inline-block;
   position: relative;
 }
-
-.menu__item::after {
-  font-size: 18px;
-  content: url("../img/arr/arr.png");
-}
-
-/* Задаю стили, чтобы скрыть дочерние блоки выпадающего списка. Ну и немного украшаю. */
 
 .dropdown {
   position: absolute;
@@ -151,10 +186,13 @@ ul, li {
   z-index: 2;
 }
 
-/* Так я делаю прежде скрытую часть видимой — при наведении курсора. */
+.header__logo {
+  padding-top: 2px;
+}
 
 .header__content {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   max-width: 100%;
 }
@@ -163,12 +201,16 @@ ul, li {
   display: flex;
   justify-content: space-between;
   max-width: 100%;
-  margin-left: -4px;
+}
+
+.menu {
+  margin-left: -8px;
+  /*компенсация паддинга рамок для режима focus*/
 }
 
 .header__top {
   width: 100%;
-  padding-top: 26px;
+  padding-top: 28px;
   padding-bottom: 28px;
   background-color: black;
   background-origin: border-box;
@@ -178,8 +220,8 @@ ul, li {
   width: 100%;
   position: relative;
   z-index: 2;
-  padding-bottom: 21px;
-  padding-top: 22px;
+  padding-bottom: 9px;
+  padding-top: 20px;
   background-color: rgba(0, 0, 0, 0.4);
   background-origin: border-box;
 }
@@ -200,10 +242,6 @@ ul, li {
 
 .dropdown__item:not(last-child) {
   margin-bottom: 20px;
-}
-
-.header__nav {
-  padding-right: 101px;
 }
 
 .p1 {
@@ -289,6 +327,7 @@ ul, li {
 .dropdown__link {
   width: 220px;
   padding: 9px 120px 12px 14px;
+  outline: 2px solid rgb(0, 0, 0, 0);
   font-family: 'OpenSans';
   font-style: normal;
   font-weight: 600;
@@ -297,39 +336,81 @@ ul, li {
   /* identical to box height */
   color: #FFFFFF;
   background-color: rgba(0, 0, 0, 0);
-  transition: color 0.1s, border-color 0.1s;
+  background-origin: border-box;
+  transition: border-color 0.2s;
 }
 
-.nav__link, .dropdown__link, .menu__link,.dropdown__item {
+.dropdown__link, .menu__link, .dropdown__item {
   border-radius: 0;
-  border: 1px solid rgba(0, 0, 0, 0);
-  transition: border-color 0.1s, color 0.3s;
+  transition-property: border-color, color;
+  transition-timing-function: ease;
+  transition-duration: 0.2s;
 }
 
-.nav__link:hover, .dropdown__link:hover, .menu__link:hover,.dropdown__item:hover {
-  border-color: #9D5CD0;
+.menu__link:hover {
+  color: #C283F3;
 }
 
-.nav__link:active, .dropdown__link:active, .menu__link:active,.dropdown__item:active {
-  color: #9D5CD0;
+.menu__link:active {
+  border-color: #7943A4;
+  color: #fff;
+}
+
+.menu__link:focus {
+  border-color: #7943A4;
+  color: #fff;
+}
+
+.nav__link:hover {
+  color: #C283F3;
+}
+
+.nav__item:active {
+  border-color: #7943A4;
+}
+
+.nav__item:focus {
+  border-color: #7943A4;
 }
 
 .menu__link {
-  padding: 0;
-  margin:0;
-  background-color: rgba(0, 0, 0, 0);
-  letter-spacing: 0px;
-  font-weight: 400;
+  margin: 0;
+  padding: 2px 10px 2px 6px;
+  border: 2px solid rgba(0, 0, 0, 0);
   font-size: 18px;
-  line-height: 23px;
-  /* identical to box height */
-  text-align: center;
-  color: #FFFFFF;
+  font-weight: 400;
   letter-spacing: 0px;
+  line-height: 23px;
+  color: #FFFFFF;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  /* identical to box height */
+}
+
+.menu__icon {
+  margin-left: 4px;
+  transition: stroke .2s ease;
+}
+
+.menu__link:hover path {
+  stroke: #9D5CD0;
+}
+
+.menu__link:active path {
+  stroke: #fff;
+}
+
+.menu__link:focus path {
+  stroke: #fff;
+}
+
+.nav__item {
+  padding: 0 6px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  transition: border-color 0.2s;
 }
 
 .nav__link {
-
   font-weight: 600;
   font-size: 18px;
   line-height: 32px;
@@ -337,6 +418,7 @@ ul, li {
   text-align: center;
   color: #FFFFFF;
   letter-spacing: 0px;
+  transition: color 0.2s;
 }
 
 .header__menu {
@@ -344,33 +426,119 @@ ul, li {
   justify-content: space-between;
 }
 
+.search {
+  position: relative;
+  margin-right: -10px;
+  /*Компенсация рамки на фокусе*/
+  align-items: center;
+  display: flex;
+}
+
 .search__input {
-  width: 220px;
+  padding: 0px 5px 8px 0;
   background-color: rgba(0, 0, 0, 0);
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-bottom: 1px solid #fff;
+  border: 2px solid rgba(0, 0, 0, 0);
   color: #fff;
   font-size: 19px;
   letter-spacing: -0.3px;
+  transition: border-color .2s ease;
 }
 
 .header__search {
-  padding-top: 2px;
+  transition: border-color .2s ease;
 }
 
-.header__search::before {
-  content: " ";
-  padding: 20px 20px;
-  background-image: url("../img/Group64.svg");
-  background-repeat: no-repeat;
-  background-position-x: 13px;
-  background-position-y: 19px;
+.header__search:hover rect {
+  fill: #7943A4;
+}
+
+.search__icon {
+  margin: 0;
+  padding: 7px 4px 4px 6px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  font-size: 19px;
+  line-height: 19px;
+  background: none;
+  transition: border-color .2s ease;
+}
+
+.search__icon:active {
+  border-color: #7943A4;
+}
+
+.search__icon:focus {
+  border-color: #7943A4;
+}
+
+.header__search path {
+  transition: fill 0.2s ease;
+}
+
+.header__search rect {
+  transition: fill 0.2s ease;
+}
+
+.header__search:hover rect {
+  fill: #C283F3;
+}
+
+.header__search:hover path {
+  fill: #C283F3;
+}
+
+.search__icon:active rect {
+  fill: #fff;
+}
+
+.search__icon:active path {
+  fill: #fff;
+}
+
+.search__icon:focus rect {
+  fill: #fff;
+}
+
+.search__icon:focus path {
+  fill: #fff;
 }
 
 .header__link {
-  color: #FFFFFF
+  color: #fff;
+}
+
+.search__input:focus {
+  border-color: #C283F3;
+  border-radius: 0;
+  outline: none;
+  color: #C283F3;
+}
+
+.search__input:active {
+  border-color: rgb(0, 0, 0, 0);
+  border-radius: 0;
+  outline: none;
+  color: #C283F3;
+}
+
+.search__input:active {
+  color: #C283F3;
+}
+
+.search__input:focus {
+  color: #C283F3;
+}
+
+.search__line {
+  position: absolute;
+  left: 41px;
+  top: 28px;
+  width: 218px;
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+.dropdown__link:hover {
+  border-color: #9D5CD0;
 }
 
 /***************hero**************************/
@@ -409,7 +577,7 @@ ul, li {
 }
 
 .hero__header {
-  margin-bottom:22px;
+  margin-bottom: 22px;
   font-family: 'OpenSans';
   font-style: normal;
   font-weight: 700;
@@ -421,12 +589,12 @@ ul, li {
 
 .hero__text {
   margin-left: -5px;
-  padding-top:41px;
+  padding-top: 41px;
   z-index: 1;
   width: 740px;
   position: relative;
   left: 0;
-  top: -5;
+  top: 0px;
   right: 0;
   bottom: 0;
 }
@@ -451,7 +619,7 @@ h1 {
 
 .hero__description {
   width: 579px;
-  margin-bottom:92px;
+  margin-bottom: 92px;
   margin-left: 3px;
   font-style: normal;
   font-weight: 700;
@@ -462,7 +630,7 @@ h1 {
   letter-spacing: 0px;
 }
 
-.subscribe__button {
+.hero__button {
   width: 314px;
   height: 70px;
   padding: 22px 3px;
@@ -508,15 +676,17 @@ button {
   line-height: 65px;
   color: #333333;
 }
-.about__header{
-  margin-bottom:16px;
-  margin-left:-3px;
+
+.about__header {
+  margin-bottom: 16px;
+  margin-left: -3px;
   font-style: normal;
   font-weight: 400;
   font-size: 48px;
   line-height: 65px;
   color: #333333;
 }
+
 .about__description {
   width: 1080px;
   font-style: normal;
@@ -525,8 +695,8 @@ button {
   line-height: 32px;
   /* or 200% */
   color: #333333;
-  
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
