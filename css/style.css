@@ -41,7 +41,7 @@
 }
 
 a {
-  margin: 0;
+  
   text-decoration: none;
 }
 
@@ -68,7 +68,9 @@ body {
 
 /*общие стили для списков*/
 
-.nav__item, .header__nav, .header__menu, .menu__item, .dropdown, .dropdown__item {
+ 
+  
+ .list-reset{ 
   margin: 0;
   padding: 0;
   list-style: none;
@@ -96,7 +98,6 @@ body {
 
 .header__button {
   position: relative;
-  width: 75px;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -177,7 +178,7 @@ body {
 .dropdown {
   position: absolute;
   max-width: 300px;
-  top: 66px;
+  top: 49px;
   left: 0px;
   display: none;
   padding: 20px 40px;
@@ -229,7 +230,7 @@ body {
 .bottom {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  font-family: 'OpenSans';
+  
 }
 
 .active {
@@ -340,7 +341,7 @@ body {
   transition: border-color 0.2s;
 }
 
-.dropdown__link, .menu__link, .dropdown__item {
+.dropdown__link, .menu__link {
   border-radius: 0;
   transition-property: border-color, color;
   transition-timing-function: ease;
@@ -373,6 +374,11 @@ body {
   border-color: #7943A4;
 }
 
+
+.dropdown__link:hover{
+  outline-color: #7943A4;
+ 
+}
 .menu__link {
   margin: 0;
   padding: 2px 10px 2px 6px;
@@ -384,7 +390,7 @@ body {
   color: #FFFFFF;
   text-align: center;
   background-color: rgba(0, 0, 0, 0);
-  /* identical to box height */
+  cursor:pointer;/* identical to box height */
 }
 
 .menu__icon {
@@ -619,6 +625,7 @@ h1 {
 
 .hero__description {
   width: 579px;
+  margin:0;
   margin-bottom: 92px;
   margin-left: 3px;
   font-style: normal;
@@ -631,6 +638,7 @@ h1 {
 }
 
 .hero__button {
+  position:relative;
   width: 314px;
   height: 70px;
   padding: 22px 3px;
@@ -648,6 +656,33 @@ h1 {
   text-align: center;
   color: #FFFFFF;
   letter-spacing: 0px;
+  transition: border-color 0.2s ease;
+}
+.hero__button:hover{
+  border-color:#D1A9F0;
+  
+}
+.hero__button::after{
+  content:'';
+  display: block;
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  Width:314px;
+  Height :70px;
+  border:2px solid rgb(0, 0, 0, 0);
+  border-radius: 100px;
+  outline: none;
+  transition:border-color 0.2s ease;
+}
+.hero__button:focus{
+  background: #9D5CD0;
+  border-color: #fff;
+  outline: none;
+}
+.hero__button:focus::after{
+  border: 2px solid #9D5CD0;
+
 }
 
 /*********************about**************************/
@@ -689,6 +724,7 @@ button {
 
 .about__description {
   width: 1080px;
+  margin:0;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
